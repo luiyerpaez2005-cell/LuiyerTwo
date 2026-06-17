@@ -33,10 +33,10 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request).then(cachedResponse => {
-      // Si está guardado en el teléfono, lo usa. Si no, va a buscarlo a internet.
+     
       return cachedResponse || fetch(event.request);
     }).catch(() => {
-      // Si falla todo (no internet y no caché), intenta buscar al menos la página principal
+
       return caches.match('index.html');
     })
   );
