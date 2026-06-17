@@ -7,16 +7,15 @@
     
     <style>
         :root {
-            /* Nueva paleta en tonos azules */
-            --bg-body: #eef5f9;      /* Azul grisáceo muy claro para el fondo */
-            --card-bg: #ffffff;      /* Blanco para mantener las tarjetas legibles */
-            --primary: #1e3a8a;      /* Azul oscuro/marino para títulos principales */
-            --accent: #38bdf8;       /* Azul claro/celeste brillante para enfoques y acentos */
-            --success: #059669;      /* Verde esmeralda (cuadrado) */
-            --warning: #ea580c;      /* Naranja */
-            --danger: #dc2626;       /* Rojo (falta) */
-            --text: #334155;         /* Gris azulado oscuro para el texto */
-            --border: #cbd5e1;       /* Borde azul grisáceo suave */
+            --bg-body: #eef5f9;      
+            --card-bg: #ffffff;      
+            --primary: #1e3a8a;     
+            --accent: #38bdf8;       
+            --success: #059669;      
+            --warning: #ea580c;      
+            --danger: #dc2626;       
+            --text: #334155;         
+            --border: #cbd5e1;      
         }
 
         * {
@@ -36,7 +35,7 @@
 
         .container {
             width: 100%;
-            max-width: 500px; /* Tamaño ideal para móvil */
+            max-width: 500px;
         }
 
         h1 {
@@ -51,7 +50,7 @@
             border-radius: 12px;
             padding: 15px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(30, 58, 138, 0.05); /* Sombra sutil azulada */
+            box-shadow: 0 4px 6px rgba(30, 58, 138, 0.05);
             border: 1px solid #e2e8f0;
         }
 
@@ -80,7 +79,7 @@
         }
 
         th {
-            background: #f8fafc; /* Fondo de tabla ligeramente azulado/frío */
+            background: #f8fafc; 
             font-weight: 600;
             color: var(--primary);
         }
@@ -99,12 +98,12 @@
         input[type="number"]:focus {
             border-color: var(--accent);
             background-color: #fff;
-            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2); /* Brillo azul al seleccionar */
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2); 
         }
 
-        /* Colores adaptados para los estados de las diferencias */
+     
         .cuadrado { background-color: #d1fae5; color: var(--success); padding: 4px 8px; border-radius: 4px; font-weight: bold; }
-        .sobra { background-color: #e0f2fe; color: #0369a1; padding: 4px 8px; border-radius: 4px; font-weight: bold; } /* Azul informativo para el sobreante */
+        .sobra { background-color: #e0f2fe; color: #0369a1; padding: 4px 8px; border-radius: 4px; font-weight: bold; } 
         .falta { background-color: #fee2e2; color: var(--danger); padding: 4px 8px; border-radius: 4px; font-weight: bold; }
 
         .total-row {
@@ -112,7 +111,7 @@
             font-weight: bold;
         }
 
-        /* Estilos para el nuevo botón de reseteo */
+      
         .btn-reset {
             width: 100%;
             padding: 12px;
@@ -129,11 +128,11 @@
         }
 
         .btn-reset:hover {
-            background-color: #b91c1c; /* Un rojo un poco más oscuro al pasar el mouse */
+            background-color: #b91c1c;
         }
 
         .btn-reset:active {
-            transform: scale(0.98); /* Efecto de presionado */
+            transform: scale(0.98);
         }
     </style>
     <link rel="manifest" href="./manifest.json">
@@ -257,15 +256,15 @@
             }
         }
 
-        // NUEVA FUNCIÓN PARA BORRAR TODO
+
         function resetearFormulario() {
-            // Confirmación opcional para evitar borrados por error
+        
             if (confirm("¿Estás seguro de que deseas borrar todos los datos ingresados?")) {
                 // Selecciona todos los inputs de número y los vacía
                 let inputs = document.querySelectorAll('input[type="number"]');
                 inputs.forEach(input => input.value = "");
 
-                // Vuelve a ejecutar los cálculos para actualizar los totales a 0.00
+               
                 calcularTodo();
             }
         }
